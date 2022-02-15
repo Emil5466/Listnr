@@ -1,0 +1,224 @@
+<!doctype html> 
+<html lang="en">
+
+<head> 
+  <meta charset="utf-8">
+  <title>Listnr web app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Listnr Music App">
+  <meta name="author" content="Alexander, Daniel, Oscar og Emil">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+</head>
+
+<body onhashchange="pageChange()">
+  <!-- tabbar navigation -->
+  <nav class="tabbar">
+    <a href="#mainpage">Main Page</a>
+    <a href="#genres">Genres</a>
+    <a href="#explore">Explore</a>
+    <a href="#mypage">My Page</a>
+    <!-- <a href="#test">Test</a> -->
+  </nav>
+
+  <!-- pages -->
+  <!-- Mainpage -->
+  <!-- <section id="test" class="page"></section> -->
+  <div id="connect" class="page">
+    <div class="connect">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo">
+      </div>
+      <div class="connect-button"> <a href="#onboarding">
+        <button>Connect</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="onboarding" class="page">
+    <div class="carousel">
+      <div class="carousel__item ">
+        <img src="img/1.png" />
+        <h1>Welcome</h1><b>
+        </b>
+        <h2>LISTNR</h2>
+        <p> A Music app that expands your musical horizon</p>
+        <div class="carousel__actions">
+          <a href="#onboarding1">
+            <button id="carousel__button--next">Next</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="onboarding1" class="page">
+    <div class="carousel">
+      <div class="carousel__item">
+        <img src="img/2.png" />
+        <h1>Certified bangers</h1>
+        <p> We make it an effort to recommend you music, that you haven't heard before
+        </p>
+        <div class="carousel__actions">
+          <a href="#onboarding2">
+            <button id="carousel__button--next">Next</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="onboarding2" class="page">
+    <div class="carousel">
+      <div class="carousel__item">
+        <img src="img/3.png" />
+        <h1>Swipe away</h1>
+        <p> To help us recommend the best music for your taste, participate in the swipe game by pressing next or dive straight into the app! </p>
+        <div class="carousel__actions-skip">
+          <a href="#mainpage">
+          <button id="carousel__button--prev">Skip</button>
+          </a>
+          <a href="#home">
+          <button id="carousel__button--next">Next</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="home" class="page">
+    <div id="board"></div>
+    <a href="#mainpage" class="myButton1">Start</a>
+  </section>
+
+  <section id="mainpage" class="page">
+  <!-- <img src="img/banner.jpeg" alt=""> -->
+  <div id="banner"></div>
+   <div>
+      <h2>Main Page</h2>
+    <h1>Featured Genres</h1>
+    <section id="featured-container" class="grid-container">
+      
+    </section>
+    <h1>Featured Artists</h1>
+    <section id="artist-container" class="grid-container">
+      
+    </section>
+    <h1>Right Now - For You</h1>
+    <section id="rightnow-container" class="grid-container">
+      
+    </section>
+  </div>
+  </section>
+
+  <!-- Genres -->
+  <section id="genres" class="page">
+   
+      <h2>Genres</h2>
+      <!-- <input type="search" placeholder="Search genres...">
+      <h3>Or discover</h3> -->
+    <div>
+    <h1>HipHop</h1>
+    <section id="hiphop-container" class="grid-container">
+      
+    </section>
+    <h1>Pop</h1>
+    <section id="pop-container" class="grid-container">
+      
+    </section>
+    <h1>Rock</h1>
+    <section id="rock-container" class="grid-container">
+      
+      <div></div>
+    </section>
+    <h1>Metal</h1>
+    <section id="metal-container" class="grid-container">
+      
+    </section>
+    <h1>R&B</h1>
+    <section id="rnb-container" class="grid-container">
+      
+    </section>
+  </div>
+  </section>
+  <!-- Explore page -->
+  <section id="explore" class="page">
+    <!-- <div> -->
+      <!-- <h2>Explore</h2> -->
+    <section id="explore1-container" class="grid-containe"></section>
+    <section id="explore1-class-container" class="grid-container luft"></section>
+    <section id="explore2-container" class="grid-containe"></section>
+    <section id="explore2-class-container" class="grid-container luft"></section>
+    <section id="explore3-container" class="grid-containe"></section>
+    <section id="explore3-class-container" class="grid-container luft"></section>
+    <section id="explore4-container" class="grid-containe"></section>
+    <section id="explore4-class-container" class="grid-container luft"></section>
+    <section id="explore5-container" class="grid-containe"></section>
+    <section id="explore5-class-container" class="grid-container luft"></section>
+  <!-- </div> -->
+  </section>
+        
+  <!-- mypage page -->
+  <section id="mypage" class="page">
+  <div>
+          <header class="topbar">
+            <h2>Hi "user"!</h2>
+          </header>
+            <h1>Your favourite albums</h1>
+            <section id="favourite-albums" class="grid-container">
+            </section>
+            <h1>Your friends must hear</h1>
+            <section id="friends-albums" class="grid-container">
+            </section>
+
+            
+            <section id="connect-friends">
+              <a href="#" class="myButton">Connect</a>
+            </section> 
+            
+            <section id="settingsbtn">
+              <a href="#" class="myButton">Settings</a>
+            </section> 
+          </div>
+    </section>
+  <section id="detailView" class="page">
+      <header>
+        <a class="left" href="#explore"><</a>
+      </header>
+      <section id="detailViewContainer" class="detail-grid"></section>
+  </section>
+    <!-- Settings page -->
+    <!-- <section id="settings" class="page">
+      <header class="topbar">
+        <h2>Settings<br>
+          <img src="img/apples.png">
+        </h2>
+      </header>
+      <div class="container1">
+        <p1>Select color mode</p1>
+      </div>
+      <a href="light"><img src="/spa-headless-cms-movies/img/apples.png"></a><a href="dark"><img src="/spa-headless-cms-movies/img/apples.png"></a><a href="gay"><img src="/spa-headless-cms-movies/img/apples.png"></a>
+        <p2>User controls</p2>
+        <a href="logout"><img src="/spa-headless-cms-movies/img/apples.png"></a><a href="spotifyuser"><img src="/spa-headless-cms-movies/img/apples.png"></a>
+        <p3>Adjust sound settings</p3>
+        <a href="equalizer"><img src="/spa-headless-cms-movies/img/apples.png"></a><a href="preferences"><img src="/spa-headless-cms-movies/img/apples.png"></a><a href="soundmode"><img src="/spa-headless-cms-movies/img/apples.png"></a>
+      <div class="bottombox"> <a href="equalizer"><img src="/spa-headless-cms-movies/img/blueaplle.png"><a href="equalizer"><img src="/spa-headless-cms-movies/img/blueaplle.png"><a href="equalizer"><img src="/spa-headless-cms-movies/img/blueaplle.png"></div>
+      </section>
+    </section> -->
+
+  <!-- loader  
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>-->
+
+  <!-- Swipe game  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <!-- SPA functionality  -->
+  <script src="js/spa.js"></script>
+  <!-- main js file -->
+  <script src="js/mainpage.js"></script>
+</body>
+
+</html>

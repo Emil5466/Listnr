@@ -1,0 +1,635 @@
+/* Made in collaboration by the whole group */
+
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ---------- root variables ---------- */
+:root {
+  --dark: #333;
+  --light: #ffffff;
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+}
+
+/* ---------- general styling ---------- */
+html {
+  color: var(--text-color-dark);
+  font-family: lato;
+  height: 100%;
+  width: 100%;
+  font-weight: 200;
+}
+
+body {
+  margin-bottom: 20px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  
+  letter-spacing: 1px;
+  
+}
+h2 {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: var(--light);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-top: 1px solid --dark;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  display: inline-block;
+  color: var(--dark);
+  text-align: center;
+  padding: 20px 0;
+  width: 24.1%;
+  text-decoration: none;
+  font-size: 0.7em;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  animation: fadeIn 0.4s;
+  padding: 0 0 30px;
+}
+
+.page div {
+  padding: 2%;
+}
+
+/* ---------- animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* ---------- styling ---------- */
+/* Grid container */
+.grid-container {
+    width: 100%;
+    padding-top: 2%;
+    margin-bottom: 2em;
+    display: flex;
+    overflow-y: auto;
+}
+.grid-container>article {
+  margin-right: 10px;
+  width: 100%;
+}
+.grid-container>a {
+  margin-right: 10px;
+  width: 100%;
+}
+.grid-container>a img {
+  min-width: 140px;
+  width: 100%;
+  display: block;
+}
+.grid-container>article img {
+  min-width: 140px;
+  width: 100%;
+  display: block;
+}
+#banner {
+  background-image: url(../img/banner.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 5% 30%;
+  padding: 20% 0;
+}
+
+/* ---------- onboarding ---------- */
+#connect {
+  z-index: 2;
+  background-color: white;
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.connect .logo{
+  display: flex;
+  justify-content: center;
+} 
+
+.connect .logo img{
+  padding-top: 120px;
+  padding-bottom: 100px;
+  max-width: 280px;
+}
+
+.connect .connect-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.connect .connect-button button {
+  border-radius: 10px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 180px;
+  height: 60px;
+  background-color: black;
+  color:white;
+  font-size: 2rem;
+}
+.carousel {
+  z-index: 2;
+  background-color: white;
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  max-width: 375px;
+}
+
+
+.carousel .carousel__item img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  min-height: 350px;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.carousel .carousel__item h1 {
+  text-align: center;
+  font-size: 25px;
+  color: #333;
+  padding-top: 20px;
+}
+
+.carousel .carousel__item h2 {
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.carousel .carousel__item p {
+  text-align: center;
+  
+  padding: 20px 50px;
+  color: #333;
+}
+
+
+.carousel .carousel__actions {
+  display: flex;
+  width: 90%;
+  padding-top: 4em;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.carousel .carousel__actions-skip {
+  display: flex;
+  width: 90%;
+  padding-top: 4em;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.carousel .carousel__actions button {
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color:white;
+  
+}
+
+.carousel .carousel__actions-skip button {
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color:white;
+}
+
+
+
+/* Swipe spil */
+#board {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  overflow: hidden;
+  background-color: rgb(245, 247, 250);
+}
+
+.card {
+  width: 90%;
+  height: calc(100vh - 200px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 1%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transform: translateX(-50%) translateY(-50%) scale(0.95);
+  z-index: 1;
+}
+
+/* slide show */
+[data-component="slideshow"] .slide {
+display: none;
+}
+
+[data-component="slideshow"] .slide.active {
+display: block;
+}
+
+.card img{
+width: 100%;
+}
+/* Knap */
+
+.myButton1 {
+background-color:#000000;
+border-radius:7px;
+color: white;
+cursor:pointer;
+text-align: center;
+width: 50%;
+margin: 0 25%;
+padding: 20px 0;
+text-decoration:none;
+position: absolute;
+top: 45%;
+
+z-index: 0;
+
+}
+
+/* Genres */
+.grid-container2 > img {
+  max-width: 100%;
+  width: 140px;
+  margin-right: 10px;
+}
+
+.grid-container2 {
+  width: 100%;
+  padding-top: 2%;
+  margin-bottom: 2em;
+  display: flex;
+  overflow-x: auto;
+}
+
+#genres h2{
+  margin-top: 10%;
+}
+
+
+#genres h2,h3{
+  text-align: center;
+}
+input {
+  margin: 1em 25%;
+  width: 50%;
+  padding: 10px;
+}
+
+/* ---------- my page ---------- */
+
+#mypage {
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+#mypage h2{
+  text-align: center;
+  margin: 1em 0;
+}
+
+#mypage p1 {
+height: 20vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#connect-friends {
+  padding-bottom: 3%;
+}
+
+#settings {
+  padding-bottom: 5%;
+}
+
+.myButton {
+	background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+	background-color:#000000;
+	border-radius:24px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 13px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #c22828 5%, #e43c3c 100%);
+	background-color:#3d3400;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+/* ---------- settings ---------- */
+
+/*tænker det er noget alla det til baggrunds farve?*/
+.container1{
+background: gray;
+position: flex;
+}
+
+#settings p1 {
+  height: 30vh;
+  display: flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom: 2%;
+  }
+
+  #settings p2 {
+    height: 10vh;
+    display: flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom: 2%;
+    }
+
+    #settings p3 {
+      height: 10vh;
+      display: flex;
+      align-items:flex-end;
+      justify-content:center;
+      padding-bottom: 2%;
+      }
+  
+    #settings a {
+    padding: 1.5%;
+    }
+
+ .bottombox {
+ position: flex;
+ background: gray;
+ }
+
+/* ____Explore page____*/
+
+.grid-containe h1 {
+  margin: 0.6em 0 0.2em;
+  font-weight: 500;
+}
+.grid-containe > article h3{
+  margin-top: 2em;
+}
+.grid-containe > article img {
+  height: 250px;
+  width: 100%;
+  object-position: 100% 20%;
+  object-fit: cover;
+}
+.luft {
+  margin-bottom: 4em;
+}
+.grid-containe p {
+  letter-spacing: 0.6px;
+  line-height: 140%;
+  font-size: 0.9em;
+}
+h3 {
+  font-size:1.2em;
+  text-align: center;
+}
+/* _____Detail View_____ */
+#detailView {
+  display: block;
+  margin: 0 auto;
+}
+
+#detailView header{
+  
+  padding: 0 1em;
+}
+
+#detailView > header a {
+  color: black;
+  font-size: 2.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+#detailViewContainer {
+  padding: 1em;
+  text-align: center;
+  margin: auto 0;
+}
+#detailViewContainer img{
+  width: 90%;
+  margin: 0 5%;
+}
+#detailViewContainer h1 {
+  font-weight: bold;
+  margin: 0.4em 0 0.3em;
+}
+
+#detailViewContainer a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 0.8em 25%;
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 12px 30px;
+  border-radius: 5px;
+}
+
+/* #detailViewContainer a:hover {
+  color: var(--dark);
+  background-color: var(--light);
+} */
+/* input form stryling */
+/* form {
+  margin: auto;
+}
+
+form button {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1em;
+  border-radius: 0;
+  color: #ffffff !important;
+  background-color: rgb(38, 76, 89);
+  width: 100%;
+  max-width: 350px;
+}
+
+input, select {
+  -webkit-appearance: none;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 350px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  display: block;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 0;
+} */
